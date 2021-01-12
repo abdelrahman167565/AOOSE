@@ -1,9 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package touringsystem;
+import com.mongodb.MongoClient;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Filters;
+import com.mongodb.client.model.Updates;
+import org.bson.Document;
 
 /**
  *
@@ -15,7 +17,16 @@ public class TouringSystem {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        // Client connection and database connection 
+        MongoClient client = new MongoClient();
+        MongoDatabase TS = client.getDatabase("TouringSystem");
+        
+        // collection creation 
+        TS.createCollection("Packages");
+        MongoCollection pack = TS.getCollection("Packages");
+        
+        
     }
     
 }
