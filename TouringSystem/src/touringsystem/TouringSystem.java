@@ -26,7 +26,7 @@ public class TouringSystem {
         TS.createCollection("Packages"); // creating the collection inside the database 
         MongoCollection pack = TS.getCollection("Packages"); 
         
-        
+        // test #1 amer
     }
     
 }
