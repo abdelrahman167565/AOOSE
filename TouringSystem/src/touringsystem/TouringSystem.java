@@ -23,8 +23,8 @@ public class TouringSystem {
         MongoDatabase TS = client.getDatabase("TouringSystem");
         
         // collection creation 
-        TS.createCollection("Packages");
-        MongoCollection pack = TS.getCollection("Packages");
+        TS.createCollection("Packages"); // creating the collection inside the database 
+        MongoCollection pack = TS.getCollection("Packages"); 
         
         
     }
